@@ -65,7 +65,7 @@ const TodoList: React.FC<TODO_LIST> = ({ handleEdit, todos }) => {
                       type="checkbox"
                       checked={todo.isCompleted}
                       onChange={() => handleChangeCheckBox(todo.id || "")}
-                      className="w-4 h-4 accent-green-600 text-green-600 bg-gray-100 border-gray-300 rounded focus:ring-green-500 dark:focus:ring-green-600 dark:bg-green-700 dark:border-green-600"
+                      className="w-4 h-4 cursor-pointer accent-green-600 text-green-600 bg-gray-100 border-gray-300 rounded focus:ring-green-500 dark:focus:ring-green-600 dark:bg-green-700 dark:border-green-600"
                     />
                   </td>
                   <td className="px-4 py-2 border text-gray-800 dark:text-gray-700">
@@ -77,8 +77,8 @@ const TodoList: React.FC<TODO_LIST> = ({ handleEdit, todos }) => {
                   <td className="px-4 py-2 border text-gray-800 dark:text-gray-700">
                     {todo.description}
                   </td>
-                  <td className="px-4 py-2 border text-gray-800 dark:text-gray-700 flex gap-2">
-                    <Trash2
+                  <td className="px-4 py-2 border text-gray-800 dark:text-gray-700">
+                    <Trash2 
                       color="red"
                       onClick={() => handleDelete(todo.id || "")}
                     />
